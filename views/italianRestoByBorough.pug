@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+    <h1>Italian resto by borough</h1>
+    
+    each restaurant in italianResto
+        ul
+            li Borough: #{restaurant._id} - Total: #{restaurant.total}

@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+    <h1>Resultat des recherches</h1>
+
+    if numberRestaurant
+    each restaurant in restaurants
+        <h4> #{restaurant.name} </h4>
+            ul
+                li Type de cuisine: #{restaurant.cuisine}
+                li Adresse: #{restaurant.address.building} #{restaurant.address.street}  
+                li Code postal: #{restaurant.address.zipcode} 
+                li Borough: #{restaurant.borough} 
+    else 
+         p Pas de restaurant trouvé
+

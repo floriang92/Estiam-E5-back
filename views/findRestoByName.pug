@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+  <h1>Recherche restaurant</h1>
+
+  form(action='/search_resto', method='POST')
+    p
+      | Entrez le nom du restaurant: 
+      input(type='text', name='restoToSearch', id="restoToSearch", value='')
+    input(type='submit', value='Rechercher')
+
+
+  
